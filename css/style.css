@@ -26,10 +26,8 @@ body {
 
 .header {
     height: 95vh;
-    background-image: linear-gradient(to right bottom,
-        #7ed56f80,
-        #28b48580),
-        url('../img/hero.jpg');
+    background-image: linear-gradient(to right bottom, #7ed56f80, #28b48580),
+        url("../img/hero.jpg");
     background-size: cover;
     background-position: top;
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
@@ -39,7 +37,7 @@ body {
 .logo-box {
     position: absolute;
     top: 40px;
-    left: 40px
+    left: 40px;
 }
 
 .logo {
@@ -50,7 +48,8 @@ body {
     position: absolute;
     top: 40%;
     left: 50%;
-    transform: translate(-50%, -50%)
+    transform: translate(-50%, -50%);
+    text-align: center;
 }
 
 .heading-primary {
@@ -58,6 +57,7 @@ body {
     text-transform: uppercase;
     /* Fix little shaking */
     backface-visibility: hidden;
+    margin-bottom: 60px;
 }
 
 .heading-primary-main {
@@ -91,31 +91,56 @@ body {
 @keyframes moveInLeft {
     0% {
         opacity: 0;
-        transform: translateX(-100px)
+        transform: translateX(-100px);
     }
 
     80% {
-        transform: translateX(10px)
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateX(0)
-    }
-}
-
-@keyframes moveInRight {
-    0% {
-        opacity: 0;
-        transform: translateX(100px)
-    }
-
-    80% {
-        transform: translateX(-10px)
+        transform: translateX(10px);
     }
 
     100% {
         opacity: 1;
         transform: translateX(0);
     }
+}
+
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    80% {
+        transform: translateX(-10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.btn:link,
+.btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    display: inline-block;
+    border-radius: 100px;
+    transition: all 0.2s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+}
+
+.btn-white {
+    background-color: white;
+    color: #777;
 }
