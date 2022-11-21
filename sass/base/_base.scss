@@ -1,0 +1,19 @@
+/* Normalize shouldn't be necessary nowadays */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    /* font-size: 10px; */
+    /* Default font size change flexibility */
+    font-size: 62.5%;
+}
+
+body {
+    /* Sometimes it's useful to use other sizing on a few elements */
+    box-sizing: border-box;
+}
