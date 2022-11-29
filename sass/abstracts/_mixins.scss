@@ -5,3 +5,16 @@
         clear: both;
     }
 }
+
+// Cool gradient color text
+// 1. First set the background image to desired gradient
+// 2. then set element type to inline-block - that way it will fit the text in and not occupy 100%
+// 3. then use background-clip: text; to only use background colour BEHIND text
+// 4. finally set text color to transparent so that the background colour is visible
+@mixin gradient-text($from, $to) {
+    background-image: linear-gradient(to right, $from, $to);
+    display: inline-block;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
