@@ -12,7 +12,11 @@
 // SEC: Components
 @import "components/button";
 @import "components/composition";
+@import "components/feature-box";
 
 // SEC: Layout
 @import "layout/header";
 @import "layout/grid";
+
+// SEC: Pages
+@import "pages/home";

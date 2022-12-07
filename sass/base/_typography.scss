@@ -45,7 +45,10 @@ body {
     font-size: 3.5rem;
     text-transform: uppercase;
     font-weight: 700;
-    @include gradient-text($color-primary-light, $color-primary-dark);
+    @include gradient-text(
+        rgba($color-primary-light, 0.8),
+        rgba($color-primary-dark, 0.8)
+    );
 
     transition: all 0.2s;
     letter-spacing: 0.2rem;

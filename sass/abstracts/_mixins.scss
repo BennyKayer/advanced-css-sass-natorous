@@ -18,3 +18,21 @@
     background-clip: text;
     color: transparent;
 }
+
+@mixin stacked-backgrounds($url) {
+    background-image: linear-gradient(
+            to right bottom,
+            rgba($color-primary-light, 0.8),
+            rgba($color-primary-dark, 0.8)
+        ),
+        url($url);
+}
+
+// Skew effect done differently
+// just skew container then un-skew direct children
+@mixin skewed-container($skew) {
+    transform: skewY($skew);
+    & > * {
+        transform: skewY(-$skew);
+    }
+}
